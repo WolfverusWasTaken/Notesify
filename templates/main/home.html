@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notesify - Home</title>
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/content.css' %}"> <!-- New CSS file -->
+</head>
+<body class="light-mode"> <!-- Default to light mode -->
+    <header>
+        <div class="header-content">
+            <h1>Notesify</h1>
+            <label class="switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+    <main>
+        <div class="flex-container">
+            <div class="left-panel">
+                <div class="scrollable-content">
+                    <p>Your notes will be displayed here.</p>
+                    <p>More content...</p>
+                    <p>Even more content...</p>
+                    <p>Keep adding notes here...</p>
+                </div>
+            </div>
+            <div class="right-panel">
+                <h2>Upload a PDF</h2>
+                <div class="upload-area" id="upload-area">
+                    <input type="file" id="pdf-upload" accept=".pdf" style="display:none;">
+                    <span>Drag & Drop your PDF here or click to select</span>
+                </div>
+                <p id="file-name" style="margin-top: 10px;">No file selected</p>
+
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Notesify. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'main/js/scripts.js' %}"></script>
+</body>
+</html>

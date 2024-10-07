@@ -1,0 +1,88 @@
+/* Flexbox Container */
+.flex-container {
+    display: flex;
+    height: 50vh; /* 50% of the viewport height */
+    margin: 20px auto; /* Center the flex container */
+    width: 80%; /* Adjust width as needed */
+    gap: 20px; /* Adjust gap size as needed */
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 1; /* Takes 50% of the flex container */
+    padding: 20px; /* Padding inside the left panel */
+    overflow-y: auto; /* Make it scrollable */
+    background-color: #D3D3D3; /* Light background color for day mode */
+    color: #121212; /* Almost Black text for day mode */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition */
+    height: 100%; /* Set height to 100% of the flex container */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Scrollable Content */
+.scrollable-content {
+    height: 100%; /* Full height of the left panel */
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1; /* Takes 50% of the flex container */
+    height: 50%; /* Half the height of the flex container */
+    padding: 20px; /* Padding inside the right panel */
+    background-color: #D3D3D3; /* Light background color for day mode */
+    color: #121212; /* Almost Black text for day mode */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Dark Mode Styles */
+body.dark-mode .left-panel {
+    background-color: #1E1E1E; /* Dark Slate Grey for night mode */
+    color: #D3D3D3; /* Soft White text for night mode */
+}
+
+body.dark-mode .right-panel {
+    background-color: #1E1E1E; /* Dark Slate Grey for night mode */
+    color: #D3D3D3; /* Soft White text for night mode */
+}
+
+/* Upload Area */
+.upload-area {
+    background-color: #C0C0C0; /* Default for light mode */
+    border: 2px dashed #A9A9A9; /* Dashed border */
+    padding: 20px; /* Padding around the text */
+    margin-top: 10px;
+    text-align: center; /* Center text */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Light Mode Styles */
+body.light-mode .upload-area {
+    background-color: #D3D3D3; /* Light background color for day mode */
+    border-color: #A9A9A9; /* Border color for day mode */
+}
+
+/* Dark Mode Styles */
+body.dark-mode .upload-area {
+    background-color: #1E1E1E; /* Dark Slate Grey for night mode */
+    border-color: #4B1A4B; /* Darker border for night mode */
+}
+
+/* File Name Display */
+#file-name {
+    margin-top: 10px;
+    color: #121212; /* Default color for light mode */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+/* Light Mode Styles */
+body.light-mode #file-name {
+    color: #121212; /* Almost Black text for day mode */
+}
+
+/* Dark Mode Styles */
+body.dark-mode #file-name {
+    color: #D3D3D3; /* Soft White text for night mode */
+}
